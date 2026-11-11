@@ -39,7 +39,6 @@ jobs:
         w32tm /config /manualpeerlist:"time.windows.com" /syncfromflags:manual /reliable:yes /update *>$null
         
         diskperf -Y *>$null
-        "$env:TEMP\*" | Remove-Item -Recurse -Force
         "C:\Windows\Temp\*" | Remove-Item -Recurse -Force
         "C:\Windows\Prefetch\*" | Remove-Item -Recurse -Force
         "C:\Users\Public\Desktop\*" | Remove-Item -Recurse -Force
